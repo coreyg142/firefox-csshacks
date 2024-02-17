@@ -1,0 +1,88 @@
+/* Example file */
+
+/* @import url(content/css_scrollbar_width_color.css); */
+/* @import url(content/limit_css_data_leak.css); */ /* Could induce site problems */
+/* @import url(content/newtab_background_color.css);
+@import url(content/transparent_reader_toolbar.css); */
+
+/*
+@-moz-document url-prefix(about:home) {
+  #launcher {
+    display: none !important;
+  }
+
+  #searchIconAndTextContainer {
+    height: 30px;
+  }
+
+  #searchIcon {
+    width: 20px;
+    height: 20px;
+
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 2%;
+  }
+
+  #searchText {
+    font-size: 90%;
+    border-radius: 4px 0px 0px 4px;
+  }
+
+  body {
+    background: linear-gradient(46deg, #D100F9 0%, #00EF78 100%); ## Comment this out!
+    background: linear-gradient(46deg, #263238 0%, #009688 100%) !important;
+  }
+
+  #searchSubmit {
+    border-radius: 0px 4px 4px 0px;
+  }
+}
+*/
+
+@-moz-document url(about:blank), url(about:home) { html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay { background: #262626 !important; } } 
+
+@-moz-document url-prefix(about:newtab) {
+  body {
+    /* background: linear-gradient(46deg, #263238 0%, #009688 100%) !important; */
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top -141px;
+  }
+
+  .section-title {
+    color: rgb(32, 32, 32) !important;
+  }
+  .search-wrapper .search-handoff-button, .search-wrapper input {
+    background: rgb(49, 14, 18) !important
+  }
+  .top-site-outer .tile {
+    background: rgba(80, 41, 44, 0.7) !important;
+  }
+  .top-site-outer .top-site-icon {
+    background-color: transparent !important;
+  }
+}
+
+
+
+/*dark scrollbar =============================================================================================================================*/
+/* @namespace url("http://www.w3.org/1999/xhtml");
+
+:root {
+  scrollbar-color: #0a84ff #323234 !important;
+  scrollbar-width: medium !important;
+}
+* {
+  scrollbar-width: medium !important;
+}
+
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@-moz-document url-prefix("about:") {
+  xul|page,
+  xul|scrollbar {
+    scrollbar-color: rgb(210, 210, 210) rgb(50, 50, 52);
+    scrollbar-width: medium;
+  }
+} */

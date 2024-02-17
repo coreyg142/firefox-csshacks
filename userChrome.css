@@ -1,0 +1,29 @@
+/* Example userChrome.css file */
+
+/* Import your desired components first */
+
+@import url(chrome/tabs_on_bottom_menubar_on_top_patch.css);
+@import url(chrome/tabs_on_bottom.css);
+@import url(chrome/inline_tab_audio_icons.css);
+
+/* Remove white flash before page load */ 
+@-moz-document url-prefix(about:), url-prefix(chrome://browser) { browser[type="content"], tabpanels { background: #1a1a1a !important; } }
+
+.browser-toolbar:not(.titlebar-color) {
+  background-color: transparent !important;
+}
+#nav-bar:-moz-lwtheme {
+  box-shadow: none !important;
+}
+/* Apply your custom modifications after imports */
+/* :root {
+  --toolbar-bgcolor: rgb(36, 44, 59) !important;
+  --uc-menu-bkgnd: var(--toolbar-bgcolor);
+  --arrowpanel-background: var(--toolbar-bgcolor) !important;
+  --autocomplete-popup-background: var(--toolbar-bgcolor) !important;
+  --uc-menu-disabled: rgb(90, 90, 90) !important;
+  --lwt-toolbar-field-focus: rgb(36, 44, 59) !important;
+}*/
+/* #TabsToolbar {
+  background-color: #2b2a33;
+} */
