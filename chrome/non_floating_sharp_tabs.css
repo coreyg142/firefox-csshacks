@@ -21,6 +21,7 @@ See the above repository for updates as well as full license text. */
 #nav-bar{
   /* This overrides value in compact_proton.css */
   box-shadow: 0 -1px 0 0 color-mix(in srgb, currentcolor 30%, transparent) !important;
+  border-top: none !important;
 }
 .tab-background[selected]{
   border-inline: 1px solid color-mix(in srgb, currentcolor 30%, transparent) !important;
@@ -31,6 +32,7 @@ See the above repository for updates as well as full license text. */
   --toolbarbutton-inner-padding: 7px !important;
 }
 /* Few exceptions for default light theme */
+:root[lwtheme] #navigator-toolbox:not([movingtab]) > #TabsToolbar,
 :root[lwtheme] #navigator-toolbox:not([movingtab]) > #titlebar > #TabsToolbar{
   --toolbar-bgcolor: transparent;
 }
@@ -131,6 +133,7 @@ See the above repository for updates as well as full license text. */
   order: 2;
   margin-inline: 10px !important;
 }
+:where(#navigator-toolbox) > #TabsToolbar,
 #titlebar{
   will-change: unset !important;
   transition: none !important;
